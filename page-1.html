@@ -23,9 +23,9 @@
             <p id="tercerP">Ajuste de <em>Brightness</em></p>
         </div>
         <script>
-            var sliderH;
-            var sliderS;
-            var sliderB;
+            var sliderH = 50;
+            var sliderS = 20;
+            var sliderB = 70;
             function setup() {
                 createCanvas(windowWidth, windowHeight).position(0, 0).style("z-index", -1);
                 selectAll("a")[1].addClass("aqui");
@@ -36,11 +36,11 @@
             }
 
             function draw() {
-                background(0, 100, 100);
+                background(sliderH, sliderS, sliderB);
                 fill("#dddddd");
                 textAlign(CENTER, CENTER);
                 textSize(20);
-                text("H " + "número" + "º S " + "número" + "% B " + "número" + "%", windowWidth / 2, windowHeight - 40);
+                text("H " + sliderH + "º S " + sliderS + "% B " + sliderB + "%", windowWidth / 2, windowHeight - 40);
             }
 
             function windowResized() {

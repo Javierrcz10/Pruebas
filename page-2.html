@@ -23,9 +23,9 @@
             <p id="tercerP">Ajuste de <em>Blue</em></p>
         </div>
         <script>
-            var sliderR;
-            var sliderG;
-            var sliderB;
+            var sliderR = 75;
+            var sliderG = 10;
+            var sliderB = 45;
             function setup() {
                 createCanvas(windowWidth, windowHeight).position(0, 0).style("z-index", -1);
                 selectAll("a")[2].addClass("aqui");
@@ -35,11 +35,11 @@
             }
 
             function draw() {
-                background(0, 0, 0);
+                background(sliderR, sliderG, sliderB);
                 fill("#dddddd");
                 textAlign(CENTER, CENTER);
                 textSize(20);
-                text("R " + "número" + " G " + "número" + " B " + "número", windowWidth / 2, windowHeight - 40);
+                text("R " + sliderR + " G " + sliderG + " B " + sliderB, windowWidth / 2, windowHeight - 40);
             }
 
             function windowResized() {
